@@ -1,0 +1,274 @@
+/*Start Global*/
+:root{
+    /*Neutral color*/
+    --Neutral_Very_dark_blue: hsl(212, 21%, 14%);
+    --Neutral_Dark_grayish_blue: hsl(228, 12%, 48%);
+    --Neutral_White: hsl(0, 0%, 100%);
+    /*Primary color*/
+    --Primary_Dark_cyan: hsl(158, 36%, 37%);
+    --Primary_Cream: hsl(30, 38%, 92%);
+    /*global rules*/
+    --padding-items:10px;
+    --margin-items:10px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "montserrat" , "fraunces";
+    background-color: var(--Primary_Cream);
+}
+
+.fraunces {
+font-family: "Fraunces", serif;
+font-optical-sizing: auto;
+font-weight: 700;
+font-style: normal;
+font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
+}
+
+.montserrat {
+font-family: "Montserrat", sans-serif;
+font-optical-sizing: auto;
+font-weight: 500;
+font-style: normal;
+}
+/*End Global*/
+.card{
+    display: flex;
+    padding: var(--padding-items);
+    justify-content: center;
+    transform:translateY(15%);
+    -webkit-transform:translateY(15%);
+    -moz-transform:translateY(15%);
+    -ms-transform:translateY(15%);
+    -o-transform:translateY(15%);
+}
+@media (max-width:979px){
+.card{
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+}    
+}   
+.card .container{
+    display: flex;
+    width: 980px;
+    height: 740px;
+    
+
+}
+@media (max-width:979px){
+    .card .container{
+    flex-direction: column;
+    max-width: 100%;
+    margin: var(--margin-items) auto;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+}
+@media (min-width:979px) {
+    .card .container .mob-pic{
+    display: none;
+    }
+}
+@media (max-width:979px) {
+.card .container .mob-pic{
+    display: flex;
+    flex-basis:25% ;
+    flex-wrap: wrap;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    max-width: 100%;
+    /* width: 100%; */
+}
+.card .container .desk-pic{
+display: none;
+}
+}
+.card .container .desk-pic{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+
+}
+.card .container .desk-pic img{
+width:1061px
+}
+.card .container .text{
+    padding:50px;
+    position: relative;
+    justify-content: center;
+    background-color: var(--Neutral_White);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+@media (max-width:979px){
+    .card .container .text{
+        max-width: 100%;
+        padding: var(--padding-items);
+    position: relative;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    }
+}
+.card .container .text .title{
+        font-size: 17px;
+        letter-spacing: 10px;
+        color: var(--Neutral_Dark_grayish_blue);
+        padding: var(--padding-items);
+        text-transform: uppercase;
+
+}
+
+@media (max-width:979px){
+    .card .container .text .title{
+        font-size: 12px;
+        font-weight: thin;
+        letter-spacing: 5px;
+        color: var(--Neutral_Dark_grayish_blue);
+        padding: 15px;
+        text-transform: uppercase;
+    }
+}
+.card .container .text .big-title{
+    font-size:50px ;
+    padding: 5px var(--padding-items);
+    line-height:1 ; 
+    color: var(--Neutral_Very_dark_blue);
+    padding-top:30px;
+    padding-bottom: 30px;
+}
+@media (max-width:979px){
+    .card .container .text .big-title{
+        font-size:30px ;
+        padding: 5px var(--padding-items);
+        line-height:1 ;   
+        color: var(--Neutral_Very_dark_blue);
+    }
+}
+.card .container .text .paragraph{
+    font-size:20px ;
+    padding-top:30px;
+    padding-bottom: 30px;
+    color: var(--Neutral_Dark_grayish_blue);
+    word-spacing: 4px;
+    line-height: 1.7;
+}
+@media (max-width:979px){
+    .card .container .text .paragraph{
+        font-size:14px ;
+        padding:var(--padding-items);
+        color: var(--Neutral_Dark_grayish_blue);
+        word-spacing: 5px;
+        line-height: 1.7;
+    }
+}
+.card .container .text .paragraph span{
+    text-transform:uppercase ;
+}
+@media (max-width:979px){
+    .card .container .text .paragraph span{
+        text-transform:uppercase ;
+        
+    }
+}
+.card .container .text .price{
+    padding:30px 0;
+}
+.card .container .text  .price .new-price {
+    color: var(--Primary_Dark_cyan);
+    padding: var(--padding-items);
+    font-size: 50px;
+}
+@media (max-width:979px){
+    .card .container .text .price .new-price{
+        color: var(--Primary_Dark_cyan);
+        padding: var(--padding-items);
+        font-size: 30px;
+    }
+}
+.card .container .text  .price .pre-price{
+    color: var(--Neutral_Dark_grayish_blue);
+    padding: var(--padding-items);
+    font-size: 18px;
+    position: absolute;
+    top: 75%;
+    left: 55%;
+    text-decoration:line-through}
+
+@media (max-width:485px){
+    .card .container .text .price .pre-price{
+        color: var(--Neutral_Dark_grayish_blue);
+        padding: var(--padding-items);
+        font-size: 15px;
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        text-decoration: line-through;
+    }
+}
+
+.card .container .text  .button{
+    color: var(--Neutral_White);
+    padding: 50px var(--padding-items);
+    background-color: var(--Primary_Dark_cyan);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    text-align: center;
+}
+
+@media (min-width:970px){
+    .card .container .text .button{
+        color: var(--Neutral_White);
+        padding: 20px var(--padding-items);
+        background-color: var(--Primary_Dark_cyan);
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        text-align: center;
+    }
+    .card .container .text .button:hover{
+        background-color: hsl(158deg 27.82% 22.05%);
+        }
+}
+.card .container .text .button:hover{
+background-color: hsl(158deg 27.82% 22.05%);
+}
+.card .container .text  .button a{
+    color: var(--Neutral_White);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 550;
+    text-align: center;
+    padding:50px;
+    width: 100%;
+}
+.card .container .text  .button img{
+    color: var(--Neutral_White);
+    width: 5%;
+}
+@media (min-width:370px){
+    .card .container .text .button a{
+        font-size: 18px;
+        font-weight: 550;
+        text-align: center;
+        padding:var(--padding-items);
+    }
+}
+
