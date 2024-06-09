@@ -221,7 +221,7 @@ width:1061px
 
 .card .container .text  .button{
     color: var(--Neutral_White);
-    padding: 50px var(--padding-items);
+    padding: 20px var(--padding-items);
     background-color: var(--Primary_Dark_cyan);
     border-radius: 10px;
     -webkit-border-radius: 10px;
